@@ -7,6 +7,7 @@ import Incentives from "components/Home/incentives"
 import Recipes from "components/Home/recipes"
 import Navbar from "components/navigation/navbar"
 import Layout from "hocs/layouts/layout"
+import Services from "components/nosotros/servicios"
 
 function Home(){
     return(
@@ -17,6 +18,7 @@ function Home(){
                 <Incentives/>
                 <Recipes/>
                 <AboutUs/>
+                <Services/>
                 <Cta/>
                 <Features/>
             </div>

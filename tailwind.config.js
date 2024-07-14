@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "blue-botton": '#1976D2'
+        "blue-botton": '#1976D2',
+        "green-lettuce": '#a0e32d'
       },
       boxShadow: {
         navbar: "0px 5px 10px 0px rgba(120, 120, 120, 0.1), 0 2px 3px -1px rgba(3, 3, 4, 0.05)",
@@ -17,6 +18,21 @@ module.exports = {
         'lg': '4px 4px 8px rgba(0, 0, 0, 0.5)',
         'xl': '5px 5px 10px rgba(0, 0, 0, 0.5)',
         '2xl': '6px 6px 12px rgba(0, 0, 0, 0.5)',
+      },
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+        'transform': 'transform'
+      },
+      transitionDuration: {
+        '300': '300ms',
+      },
+      transitionTimingFunction: {
+        'ease-in-out': 'ease-in-out',
+      },
+      transform: {
+        'translate-x-0': 'translateX(0)',
+        '-translate-x-full': 'translateX(-100%)',
       }
     }
   },
@@ -44,4 +60,3 @@ module.exports = {
     }
   ],
 }
-

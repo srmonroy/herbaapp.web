@@ -5,6 +5,10 @@ import Header from "components/platillos/header"
 import Layout from "hocs/layouts/layout"
 import Recepies2 from 'components/platillos/recipes'
 import Features from "components/Home/features"
+import Services from "components/platillos/servicios"
+import FAQ from "components/nosotros/faq"
+import WhatsAppCTA from "components/nosotros/cta_what"
+import Recipes from "components/platillos/recipes"
 
 function Platillos(){
     return(
@@ -12,9 +16,11 @@ function Platillos(){
             <Navbar/>
             <div className="pt-24">
                 <Header/>
+                <Recipes/>
                 <Features/>
-                <Recepies2/>
-                <Cta/>
+                <Services/>
+                <WhatsAppCTA/>
+                <FAQ/>
             </div>
             <Footer/>
         </Layout>
