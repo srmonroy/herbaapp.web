@@ -1,78 +1,52 @@
+import organicImage from 'c:/Users/sr-mo/Documents/herba.app/herbaapp.web/src/assets/images/cutting.jpeg';
+import veggImage from 'c:/Users/sr-mo/Documents/herba.app/herbaapp.web/src/assets/images/cutting.jpeg';
+import gfreeImage from 'c:/Users/sr-mo/Documents/herba.app/herbaapp.web/src/assets/images/cutting.jpeg';
+
 const posts = [
   {
     title: 'Desayunos',
-    href: '#',
-    category: { name: 'Article', href: '#' },
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
-    imageUrl:
-      'https://th.bing.com/th/id/OIP.iNbIsoW22bAjAU5Fzv2o4AHaE6?rs=1&pid=ImgDetMain',
-    readingTime: '6 min',
-    author: {
-      name: 'Roel Aufderehar',
-      href: '#',
-      imageUrl:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
+    href: '/platillos/desayunos',
+    category: { name: 'Seccion Mix de Frutas', href: '#' },
+    description: 'Diseñados para comenzar tu día con energía y bienestar. Encontrarás una variedad de elecciones nutritivas y deliciosas, elaboradas con ingredientes frescos y naturales.',
+    imageUrl: organicImage,
   },
   {
     title: 'Comida Mexicana',
-    href: '#',
-    category: { name: 'Video', href: '#' },
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.',
-    date: 'Mar 10, 2020',
-    datetime: '2020-03-10',
-    imageUrl:
-      'https://th.bing.com/th/id/OIP.iNbIsoW22bAjAU5Fzv2o4AHaE6?rs=1&pid=ImgDetMain',
-    readingTime: '4 min',
-    author: {
-      name: 'Brenna Goyette',
-      href: '#',
-      imageUrl:
-        'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
+    href: '/platillos/c_mexicana',
+    category: { name: 'Sección de Tacos', href: '#' },
+    description: 'Sumérgete en nuestra sección de comida mexicana, donde celebramos la rica tradición culinaria de México con platillos auténticos y sabores vibrantes.',
+    imageUrl: veggImage,
   },
   {
-    title: 'Comida Rapida',
-    href: '#',
-    category: { name: 'Case Study', href: '#' },
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.',
-    date: 'Feb 12, 2020',
-    datetime: '2020-02-12',
-    imageUrl:
-      'https://th.bing.com/th/id/OIP.iNbIsoW22bAjAU5Fzv2o4AHaE6?rs=1&pid=ImgDetMain',
-    readingTime: '11 min',
-    author: {
-      name: 'Daniela Metz',
-      href: '#',
-      imageUrl:
-        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
+    title: 'Comida Rápida',
+    href: '/platillos/fast_food',
+    category: { name: 'Burritos y más', href: '#' },
+    description: 'Ofrecemos opciones deliciosas y rápidas para satisfacer tus antojos. Cada platillo está diseñado para ofrecerte conveniencia sin comprometer la calidad ni el sabor.',
+    imageUrl: gfreeImage,
   },
-]
+];
 
 export default function Recipes() {
   return (
-      <div className="relative bg-blue-botton px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28 rounded-b-xl">
+    <div className="relative bg-blue-botton px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28 rounded-b-xl">
       <div className="absolute inset-0">
         <div className="h-1/3 bg-white sm:h-2/3" />
       </div>
       <div className="relative mx-auto max-w-7xl">
         <div className="text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-gray-900">Platillos Deliciosos</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900">Nuestros Platillos</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-600 sm:mt-4">
+            Cada platillo ha sido cuidadosamente creado para ofrecer una experiencia deliciosa y única, libre de productos animales y repleta de ingredientes frescos y naturales.
           </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
-            <div key={post.title} className="flex flex-col overflow-hidden rounded-lg shadow-lg">
+            <div
+              key={post.title}
+              className="flex flex-col overflow-hidden rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:scale-105 focus:shadow-2xl"
+            >
               <div className="flex-shrink-0">
-                <img className="h-48 w-full object-cover" src={post.imageUrl} alt="" />
+                <img className="h-full w-full object-cover" src={post.imageUrl} alt={post.title} />
               </div>
               <div className="flex flex-1 flex-col justify-between bg-white p-6">
                 <div className="flex-1">
@@ -83,28 +57,16 @@ export default function Recipes() {
                   </p>
                   <a href={post.href} className="mt-2 block">
                     <p className="text-xl font-semibold text-gray-900">{post.title}</p>
-                    <p className="mt-3 text-base text-gray-500">{post.description}</p>
+                    <p className="mt-2 text-md text-gray-600">{post.description}</p>
                   </a>
                 </div>
-                <div className="mt-6 flex items-center">
-                  <div className="flex-shrink-0">
-                    <a href={post.author.href}>
-                      <span className="sr-only">{post.author.name}</span>
-                      <img className="h-10 w-10 rounded-full" src={post.author.imageUrl} alt="" />
-                    </a>
-                  </div>
-                  <div className="ml-3">
-                    <p className="text-sm font-medium text-gray-900">
-                      <a href={post.author.href} className="hover:underline">
-                        {post.author.name}
-                      </a>
-                    </p>
-                    <div className="flex space-x-1 text-sm text-gray-500">
-                      <time dateTime={post.datetime}>{post.date}</time>
-                      <span aria-hidden="true">&middot;</span>
-                      <span>{post.readingTime} read</span>
-                    </div>
-                  </div>
+                <div className="mt-6 flex items-center justify-around">
+                  <button
+                    className="rounded-full bg-blue-botton text-white px-4 py-2 hover:bg-[#a0e32d] focus:outline-none focus:bg-green-700"
+                    onClick={() => window.location.href = post.href}
+                  >
+                    Ver más
+                  </button>
                 </div>
               </div>
             </div>
@@ -112,5 +74,5 @@ export default function Recipes() {
         </div>
       </div>
     </div>
-  )
+  );
 }

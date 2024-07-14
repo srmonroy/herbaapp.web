@@ -1,5 +1,5 @@
 import { Typewriter } from "react-simple-typewriter";
-import backgroundImage from 'c:/Users/sr-mo/Documents/herba.app/herbaapp.web/src/assets/images/cutting.jpeg'; // Ajusta la ruta según tu estructura
+import backgroundImage from 'assets/images/bgVegetal.jpeg' // Ajusta la ruta según tu estructura
 
 function Header(){
     return(
@@ -16,10 +16,10 @@ function Header(){
                 <div className="relative mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40 z-10">
                     <div>
                         <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                            <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                            <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-xl leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                                 <span className="text-white text-shadow-xl">
-                                    Delicioso y Nutritivo!{' '}
-                                    <a href="/platillos" className="font-semibold text-blue-600">
+                                    Contactanos!{' '}
+                                    <a href="/contacto" className="font-semibold text-blue-600">
                                         <span className="absolute inset-0" aria-hidden="true" />
                                         Recetas <span aria-hidden="true">&rarr;</span>
                                     </a>
@@ -27,11 +27,11 @@ function Header(){
                             </div>
                         </div>
                         <div>
-                            <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl text-black text-shadow-xl">
-                                Hoy quiero: <span> </span>
-                                <div className='inline-flex' style={{color: 'white', fontWeight: 'bold'}}>
+                            <h1 className="text-6xl font-bold tracking-tight sm:text-center sm:text-6xl text-white text-shadow-xl">
+                                Recetas<span> </span>
+                                <div className='inline-flex' style={{color: '#2563EB', fontWeight: 'bold'}}>
                                     <Typewriter
-                                        words={['Tacos','Fruta','Veganesas','Burritos','Ensalada','Chilaquiles', 'TODO!']}
+                                        words={['Deliciosas', 'Nutritivas', 'Concientes', 'Economicas', 'Veganas', 'Saludables']}
                                         loop={0}
                                         cursor
                                         cursorStyle='_'
@@ -41,9 +41,20 @@ function Header(){
                                     /> 
                                 </div>
                             </h1>
-                            <p className="mt-6 text-lg text font-bold leading-8 text-gray-200 sm:text-center text-shadow-xl">
-                                Recetas caseras, nutritivas y muy deliciosas.
+                            <p className="mt-6 text-xl text font-bold leading-8 text-gray sm:text-center text-shadow-2xl">
+                                Descubre el poder de la alimentacion Basada en Plantas
                             </p>
+                            <div className="mt-8 flex justify-center"> {/* Cambiado a justify-center */}
+                                <a
+                                    href="#"
+                                    className="inline-block rounded-xl bg-[#a0e32d] px-4 py-1.5 text-base font-semibold leading-7 text-black shadow-sm ring-1 ring-green-200 hover:bg-[#a0e32d] hover:ring-indigo-700"
+                                >
+                                    Quiero Probarlo!
+                                    <span className="text-blue-botton" aria-hidden="true">
+                                        &rarr;
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                         <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
                             <svg

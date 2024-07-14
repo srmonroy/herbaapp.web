@@ -1,22 +1,22 @@
-import loveVida from 'c:/Users/sr-mo/Documents/herba.app/herbaapp.web/src/assets/images/animalCare.png'
-import alimentacionSal from 'c:/Users/sr-mo/Documents/herba.app/herbaapp.web/src/assets/images/vegetableBox.png'
-import salad from 'c:/Users/sr-mo/Documents/herba.app/herbaapp.web/src/assets/images/salad.png'
+import loveVida from 'c:/Users/sr-mo/Documents/herba.app/herbaapp.web/src/assets/images/animalCare.png';
+import alimentacionSal from 'c:/Users/sr-mo/Documents/herba.app/herbaapp.web/src/assets/images/vegetableBox.png';
+import salad from 'c:/Users/sr-mo/Documents/herba.app/herbaapp.web/src/assets/images/salad.png';
 
 const incentives = [
     {
         name: 'Respeto a la Vida',
         imageSrc: loveVida,
-        description: "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
+        description: "Valoramos cada forma de vida, ofreciendo opciones alimenticias que son completamente libres de productos animales, promoviendo así un impacto positivo en el bienestar animal y el medio ambiente.",
     },
     {
         name: 'Alimentación Saludable',
         imageSrc: alimentacionSal,
-        description: "If it breaks in the first 10 years we'll replace it. After that you're on your own though.",
+        description: "Nos comprometemos a ofrecer opciones nutritivas y equilibradas que satisfacen las necesidades de una dieta saludable. Nuestros alimentos están diseñados para nutrir tu cuerpo y mejorar tu calidad de vida.",
     },
     {
-        name: 'Autentico Sabor',
+        name: 'Auténtico Sabor',
         imageSrc: salad,
-        description: "If you don't like it, trade it to one of your friends for something of theirs. Don't send it here though.",
+        description: "En Herba, combinamos ingredientes frescos y seleccionados cuidadosamente para ofrecer sabores genuinos y caseros en cada plato. Nos esforzamos por crear experiencias culinarias que sean tanto deliciosas como memorables.",
     },
 ];
 
@@ -29,22 +29,17 @@ export default function Incentives() {
                         <h2 className="text-4xl font-bold tracking-tight text-gray-900">
                             Nuestros Pilares
                         </h2>
-                        <p className="mt-4 text-gray-500">
-                            Bienvenido a mi rincón personal dedicado a la cocina vegana y la
-                            alimentación consciente. Aquí comparto mi pasión por crear deliciosas
-                            recetas basadas en plantas que no solo nutren el cuerpo, sino también
-                            el alma y el planeta.
+                        <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-600 sm:mt-4">
+                            "Bienvenido a Herba, donde llevamos lo saludable a otro nivel. Disfruta de opciones deliciosas y 100% libres de productos animales, disponibles ahora en la CDMX y próximamente en nuestro restaurante. ¡Descubre el sabor que transforma tu bienestar!"
                         </p>
                     </div>
                     <div className="mt-16 grid grid-cols-1 gap-y-10 gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
                         {incentives.map((incentive) => (
-                            <div key={incentive.name} className="sm:flex lg:block text-center">
-                                <div className="sm:flex-shrink-0">
-                                    <img className="h-16 w-16 mx-auto" src={incentive.imageSrc} alt={incentive.name} />
-                                </div>
-                                <div className="mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0 ">
-                                    <h3 className="text-sm font-medium text-white bg-blue-botton rounded-b-lg">{incentive.name}</h3>
-                                    <p className="mt-2 text-sm text-gray-500">{incentive.description}</p>
+                            <div key={incentive.name} className="flex flex-col items-center text-center">
+                                <img className="h-20 w-20 mx-auto" src={incentive.imageSrc} alt={incentive.name} />
+                                <div className="mt-4">
+                                    <h3 className="text-xl font-medium text-gray-900">{incentive.name}</h3>
+                                    <p className="mt-2 text-md text-gray-600">{incentive.description}</p>
                                 </div>
                             </div>
                         ))}

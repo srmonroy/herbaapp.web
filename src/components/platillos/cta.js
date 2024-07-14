@@ -10,7 +10,7 @@ export default function Cta() {
                 <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
                     <div className="inline-flex rounded-md shadow">
                         <a
-                            href="#"
+                            href="/platillos"
                             className="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-botton px-5 py-3 text-base font-medium text-white hover:bg-indigo-700"
                         >
                             Ordenar en CDMX
